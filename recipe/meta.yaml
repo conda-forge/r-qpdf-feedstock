@@ -1,4 +1,4 @@
-{% set version = '1.1' %}
+{% set version = "1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,8 +13,8 @@ source:
   sha256: 71f106925aeffcf3cae500aad5f9306b64a9ed963540ec1d77a161c49975960e
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,16 +25,16 @@ requirements:
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('m2w64_cxx') }}        # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}grep              # [win]
-    - {{posix}}autoconf
-    - {{posix}}automake          # [not win]
-    - {{posix}}automake-wrapper  # [win]
-    - {{posix}}pkg-config
-    - {{posix}}make
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}sed               # [win]
+    - {{ posix }}grep              # [win]
+    - {{ posix }}autoconf
+    - {{ posix }}automake          # [not win]
+    - {{ posix }}automake-wrapper  # [win]
+    - {{ posix }}pkg-config
+    - {{ posix }}make
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-rcpp
@@ -42,7 +42,7 @@ requirements:
     - r-curl
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-rcpp
     - r-askpass
     - r-curl
@@ -54,12 +54,11 @@ test:
 
 about:
   home: https://github.com/ropensci/qpdf (devel), http://qpdf.sourceforge.net/ (upstream)
-  license: Apache 2.0
-  summary: 'Content-preserving transformations transformations of PDF files such  as split, combine,
-    and compress. This package interfaces directly to the ''qpdf''  C++ API and does
-    not require any command line utilities. Note that ''qpdf'' does not read actual
-    content from PDF files: to extract text and data you need the ''pdftools'' package.'
+  license: Apache-2.0
+  summary: "Content-preserving transformations transformations of PDF files such  as split, combine, and compress. This package interfaces directly to the 'qpdf'  C++ API and does not require any command line utilities. Note that 'qpdf' does not read actual content from PDF files: to extract text and data you need the 'pdftools'\
+    \ package."
   license_family: Apache
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
