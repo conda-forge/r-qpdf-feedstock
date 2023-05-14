@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,6 +40,7 @@ requirements:
     - r-rcpp
     - r-askpass
     - r-curl
+    - jpeg
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
