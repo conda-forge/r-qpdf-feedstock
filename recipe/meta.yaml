@@ -40,11 +40,13 @@ requirements:
     - r-rcpp
     - r-askpass
     - r-curl
-    - jpeg
-    - zlib
+    - jpeg                         # [not win]
+    - zlib                         # [not win]
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - {{ native }}libjpeg-turbo    # [win]
+    - {{ native }}zlib             # [win]
     - r-rcpp
     - r-askpass
     - r-curl
