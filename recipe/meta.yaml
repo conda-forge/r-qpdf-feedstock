@@ -41,6 +41,7 @@ requirements:
     - r-askpass
     - r-curl
     - jpeg
+    - zlib
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
