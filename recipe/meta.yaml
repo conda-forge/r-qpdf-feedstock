@@ -1,4 +1,4 @@
-{% set version = "1.3.4" %}
+{% set version = "1.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qpdf_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qpdf/qpdf_{{ version }}.tar.gz
-  sha256: b93aaf0733725781a41c4186db0133c918b55a42d669c36ef009a06aff79cae4
+  sha256: 3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6
 
 build:
   number: 0
