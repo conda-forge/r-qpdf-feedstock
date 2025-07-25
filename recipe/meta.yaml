@@ -45,11 +45,10 @@ requirements:
     - r-askpass
     - r-curl
     - libjpeg-turbo                          # [not win]
-    - zlib                         # [not win]
+    - zlib
   run:
     - r-base
     - libjpeg-turbo    # [win]
-    - zlib             # [win]
     - r-rcpp
     - r-askpass
     - r-curl
